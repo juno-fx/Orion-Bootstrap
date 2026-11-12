@@ -5,6 +5,10 @@
 </p>
 A guided, terminal-based installer for Juno Orion. It walks you through a short series of screens, then either installs a lightweight Kubernetes (k3s) on the local machine and deploys Juno onto it, or deploys Juno onto a Kubernetes cluster you already have.
 
+<br/>
+
+> **Beta:** This installer is currently in beta. You may encounter rough edges, and behaviour may change between releases. Please report any problems to support (see the Support section below).
+
 ## Before you start
 
 **Choose your install type**
