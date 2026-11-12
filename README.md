@@ -72,8 +72,8 @@ sudo ./orion-bootstrap-<arch>
 
 ### 2. Offline installation details (offline installs only)
 
-[!TIP]
-For further information on deploying Juno Orion in an air gapped environment, please see our [Air gapped installation guide](https://docs.juno-innovations.com/Orion-Documentation/latest/installation/advanced/air-gapped/) and our [Air gapped bundler](https://github.com/juno-fx/Airgap-Bundler) for easy image and chart preparation*
+***Note:***
+For further information on deploying Juno Orion in an air gapped environment, please see our [Air gapped installation guide](https://docs.juno-innovations.com/Orion-Documentation/latest/installation/advanced/air-gapped/) and our [Air gapped bundler](https://github.com/juno-fx/Airgap-Bundler) for easy image and chart preparation
 
 Fill in each field and press Enter to move on. Example values are shown in grey and disappear when you start typing.
 
@@ -107,13 +107,14 @@ https://<IP/HOSTNAME of your target cluster>/orion/setup/
 
 Open that address in a web browser and complete the Orion Admin setup wizard.
 
-[!NOTE]
+***Note:***
 There is a chance that the images used to run Orion are taking longer than expected to be pulled into the cluster, we suggest checking your cluster for this by running `kubectl` commands such as `kubectl get pods -A` and searching for pods named as follows. If their status is "ContainerCreating" then more time is required, wait until they show as "Running" then attempt to visit the above URL.
 
 - genesis-*
 - terra-*
 - titan-*
 - metrics-gatherer-*
+
 
 ## Saved settings
 
