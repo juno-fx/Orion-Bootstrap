@@ -40,14 +40,14 @@ A guided, terminal-based installer for Juno Orion. It walks you through a short 
 Copy the binary to the target machine and run it in a terminal:
 
 ```
-chmod +x phobos
-./phobos
+chmod +x orion-bootstrap-<arch>
+./orion-bootstrap-<arch>
 ```
 
 For a k3s install, run it as root:
 
 ```
-sudo ./phobos
+sudo ./orion-bootstrap-<arch>
 ```
 
 ## Controls
@@ -116,13 +116,13 @@ They are saved when you quit with Ctrl+C or when an install step starts, and rel
 
 ## Troubleshooting
 
-- **"application is not running as root"**: a k3s install needs root. Re-run with `sudo ./phobos`.
+- **"application is not running as root"**: a k3s install needs root. Re-run with `sudo ./orion-bootstrap-<arch>`.
 - **"failed to contact kubernetes"**: set `KUBECONFIG` to a valid kubeconfig and check the cluster is reachable.
 - **"failed to locate Juno node label"**: label at least one node as shown in "Before you start".
 - **Active kube context does not match the selected cluster**: switch context, for example `aws eks update-kubeconfig --name <cluster-name>`, and run again.
 - **Permission denied writing the settings file**: an old `/tmp/juno_bootstrap_chart_values.yaml` owned by another user is in the way. Remove it or run as the same user.
 - **Install failed**: the error screen shows the reason and, for k3s installs, the location of the install log. Include it when contacting support.
-- **Verbose logging**: run with `DEBUG=yes ./phobos` to write detailed logs to `debug.log` in the current directory.
+- **Verbose logging**: run with `DEBUG=yes ./orion-bootstrap-<arch>` to write detailed logs to `debug.log` in the current directory.
 
 ## Support
 
