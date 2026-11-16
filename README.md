@@ -37,17 +37,10 @@ A guided, terminal-based installer for Juno Orion. It walks you through a short 
 
 ## Running the installer
 
-Copy the binary to the target machine and run it in a terminal:
+Download the installer and run it as root:
 
 ```
-chmod +x orion-bootstrap-<arch>
-./orion-bootstrap-<arch>
-```
-
-For a k3s install, run it as root:
-
-```
-sudo ./orion-bootstrap-<arch>
+ARCH=$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/') && curl -L -o orion-bootstrap "https://github.com/juno-fx/Orion-Bootstrap/releases/latest/download/orion-bootstrap-${ARCH}" && chmod +x orion-bootstrap && sudo -E ./orion-bootstrap
 ```
 
 ## Controls
